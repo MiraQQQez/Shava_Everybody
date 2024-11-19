@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendor/style.css" />
+    <link rel="stylesheet" href="vendor/registation_script" />
+  
+    <style>
+      /* Стили для всего body (всей страницы) */
+      body {
+        margin: 0;
+        font-family: "V_CCZoinks", sans-serif;
+        font-size: 20px;
+        background-color: rgb(235, 215, 191);
+        color: black; /* Добавляем цвет текста */
+        line-height: 1.5; /* Изменяем межстрочный интервал */
+      }
+
+      /* Стили для ссылки */
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Стили для header (шапки сайта) */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 150px;
+        background: url("../images/shawa_background_3.jpg") repeat-x;
+        background-size: auto 100%;
+        animation: moveBackground 85s linear infinite;
+        transition: background-position 1s ease-in-out;
+      }
+
+      /* Анимация движения фона хедера */
+      @keyframes moveBackground {
+        0% {
+          background-position: 0 0; /* Начальное положение фона */
+        }
+        100% {
+          background-position: -1000px 0; /* Конечное положение фона */
+        }
+      }
+
+      /* Контейнер для содержимого header */
+      .content {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        height: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      /* Логотип и название сайта */
+      .logo-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-text {
+        padding-top: 20px;
+      }
+
+      .logo-text a h1 {
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      header > a img {
+        height: 60px; /* Уменьшаем высоту логотипа */
+        width: auto; /* Ширина подстраивается автоматически */
+        display: block;
+        /* Добавляем фиксированную ширину для дополнительного контроля */
+        max-width: 100%; /* Убедимся, что логотип не превышает ширину контейнера */
+      }
+
+      /* Стили для навигации (меню сайта) */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .nav-item {
+        position: relative;
+        margin: 0 15px;
+      }
+
+      nav a {
+        position: relative;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+        z-index: 1;
+        background-color: transparent;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      /* Псевдоэлемент для создания оранжевого прямоугольника */
+      nav a::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: linear-gradient(to right, #ff6347, #f79f81);
+        z-index: -1;
+        transform: translate(-50%, -50%) scaleX(0);
+        transform-origin: bottom left;
+        transition: transform 0.4s ease-in-out;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Анимация при наведении на ссылку */
+      nav a:hover::before {
+        transform: translate(-50%, -50%) scaleX(1);
+      }
+
+      nav ul li {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Стили для основного контента (главного блока с меню шаурмы) */
+      main {
+        padding: 50px calc(50% - 600px);
+        background-color: rgb(235, 215, 191);
+      }
+
+      h1 {
+        margin: 0 0 50px;
+        text-align: center;
+        font-size: 4em;
+      }
+
+      /* Контейнер для регистрации */
+      .registration-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+      }
+
+      .registration-form {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 400px;
+        width: 100%;
+        animation: fadeInUp 0.5s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .registration-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .registration-form input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .register-button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(to right, #ff6347, #f79f81);
+        color: #cf1717;
+        font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .register-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <div class="logo-wrapper">
+          <a href="#"
+            ><img
+              src="../images/shava_everybody_logojpg.png"
+              alt="Логотип"
+              style="
+                max-height: 200px;
+                height: 250px;
+                max-width: 250px;
+                display: block;
+                margin: 0;
+              "
+          /></a>
+          <div class="logo-text">
+            <a href="#"><h1>Shawa Everybpdy!</h1></a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li class="nav-item"><a href="#">Главная</a></li>
+            <li class="nav-item"><a href="#">О нас</a></li>
+            <li class="nav-item"><a href="#">Меню</a></li>
+            <li class="nav-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="registration-container">
+        <div class="registration-form">
+          <form id="registration-form">
+            <label for="name">Имя</label>
+            <input type="text" id="name" placeholder="Имя" />
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" placeholder="Электронная почта" />
+            <label for="password">Пароль</label>
+            <input type="password" id="password" placeholder="Пароль" />
+            <input
+              type="submit"
+              value="Зарегистрироваться"
+              class="register-button"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/registration_script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registrationContainer = document.querySelector(
+          ".registration-container"
+        );
+        registrationContainer.classList.add("show");
+      });
+    </script>
+  </body>
+</html>

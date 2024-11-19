@@ -1,0 +1,413 @@
+body {
+  margin: 0;
+  height: 200vh;
+  font-family: "V_CCZoinks", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(to right, #ffe6cc, #ffcc99);
+  color: black;
+  line-height: 1.6;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  width: 0%;
+  background-image: linear-gradient(90deg, #f598a8, #f6edb2);
+  transition: width 0.25s;
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Стили для ссылок */
+a {
+  color: #e25d04f6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d35400;
+}
+
+/* Стили для header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  background: url("../images/shawa_background.png") repeat-x;
+  background-size: auto 100%;
+  animation: moveBackground 85s linear infinite;
+  transition: background-position 1s ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.logo-text {
+  padding-top: 0px;
+}
+
+.logo-text a h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 150px;
+  font-size: 34px;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav a {
+  padding: 10px 15px;
+  color: #e25d04f6;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  margin-top: 150px;
+  background-color: rgb(231, 224, 198);
+  min-height: calc(100vh - 150px);
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 45px;
+  color: #e25d04f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin: 10px 0 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #e25d04f6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.shava_products {
+  flex: 0 1 calc(33.333% - 30px);
+  min-width: 250px;
+  max-width: 280px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.shava_products::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #f598a8, #f6edb2, #d5728e, #d7d38d);
+  z-index: -1;
+}
+
+.shava_products::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: rgb(231, 224, 198);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.shava_products:hover::before {
+  animation: borderRotate 4s linear infinite;
+}
+
+.shava_products:hover::after {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+@keyframes borderRotate {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+.highlight {
+  color: #e25d04f6;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Улучшенные стили */
+.product-footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-size: 1.2em;
+  color: #e25d04f6;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #e25d04f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #d35400;
+}
+
+.shava_products.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Обновляем стили футера */
+.main-footer {
+    position: relative;
+    background: linear-gradient(to right, #f598a8, #f6edb2);
+    padding: 50px 0 20px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info,
+.footer-social,
+.footer-hours {
+    text-align: center;
+}
+
+.footer-info h3,
+.footer-social h3,
+.footer-hours h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info p,
+.footer-hours p {
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-info p:hover,
+.footer-hours p:hover {
+    transform: translateY(-2px);
+}
+
+.social-link {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #e25d04;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+.footer-gradient-overlay {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, rgba(245, 152, 168, 0.5));
+    pointer-events: none;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1024px) {
+    .menu-container {
+        max-width: 800px;
+    }
+    
+    .shava_products {
+        flex: 0 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        max-width: 400px;
+    }
+    
+    .shava_products {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 35px;
+        margin: 15px 0;
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin: 10px 0 20px;
+    }
+}
+
+/* Обновляем стили для изображений в карточках */
+.shava_products img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+/* Добавляем стили для кликабельности */
+.shava_products,
+.shava_products img,
+.shava_products .Shawa_products,
+.shava_products span,
+.shava_products p {
+    cursor: pointer;
+}
+
+/* Добавляем эффекты при наведении */
+.shava_products:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 100, 0, 0.1);
+}
+
+.shava_products:hover img {
+    transform: scale(1.05);
+}

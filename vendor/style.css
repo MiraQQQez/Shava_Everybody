@@ -1,0 +1,1260 @@
+/* Стили для всего body (всей страницы) */
+body {
+  margin: 0;
+  font-family: "V_CCZoinks", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(to right, #ffe6cc, #ffcc99);
+  color: black;
+  line-height: 1.6;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  width: 0%;
+  background-image: linear-gradient(90deg, #f598a8, #f6edb2);
+  transition: width 0.25s;
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Стили для ссылок */
+a {
+  color: #e25d04f6;
+}
+
+/* Контейнер для содержимого header */
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Логотип и название сайта */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.logo-text {
+  padding-top: 0px;
+}
+
+.logo-text a h1 {
+  font-size: 34px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Обновляем стили для контейнера меню */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+    background: transparent;
+    position: relative;
+}
+
+/* Добавляем декоративные элементы для меню */
+.menu-container::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+/* Добавляем иконки для меню */
+.menu-container .decorative-elements {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+/* Позиции иконок для меню */
+.menu-container .icon-1 { top: -20px; left: 5%; color: #d5728e; }
+.menu-container .icon-2 { top: -20px; right: 5%; color: #e25d04; }
+.menu-container .icon-3 { bottom: -20px; left: 5%; color: #f598a8; }
+.menu-container .icon-4 { bottom: -20px; right: 5%; color: #d7d38d; }
+
+/* Выравнивание всех секций */
+.menu-container,
+.about-us,
+.testimonial-container,
+.promotion-container,
+.delivery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+    position: relative;
+}
+
+/* Одинаковые отступы между секциями */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 50px 20px;
+    margin-top: 150px;
+}
+
+/* Выравнивание контента внутри секций */
+.about-us,
+.testimonial-container,
+.promotion-container,
+.delivery-container {
+    text-align: left;
+    padding: 40px;
+}
+
+/* Обновляем стили для карточек шаурмы */
+.shava_products {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: transparent;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    min-width: 250px;
+    max-width: 350px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Эффекты при наведении */
+.shava_products:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 100, 0, 0.1);
+}
+
+/* Обновляем градиентную рамку для карточек */
+.shava_products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #f598a8, #f6edb2, #d5728e, #d7d38d);
+    z-index: -1;
+}
+
+.shava_products::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: rgb(231, 224, 198);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.shava_products:hover::before {
+    animation: borderRotate 4s linear infinite;
+}
+
+.shava_products:hover::after {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+/* Обновляем стили для изображений */
+.shava_products img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.shava_products:hover img {
+    transform: scale(1.05);
+}
+
+/* Добавляем эффект тени при наведении */
+.shava_products:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация вращения градиента рамки */
+@keyframes borderRotate {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Стили для текста */
+.shava_products .highlight {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #e25d04f6;
+}
+
+.shava_products p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 0.9em;
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 1024px) {
+    .menu-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .shava_products {
+        flex: 0 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .shava_products {
+        flex: 0 1 100%;
+        max-width: 400px;
+    }
+}
+
+/* Добавляем декоративные элементы для секции меню */
+.menu-container .decorative-elements {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+.menu-container .decorative-icon {
+    position: absolute;
+    font-size: 30px;
+}
+
+/* Выделенные слова */
+.highlight {
+  color: #e25d04f6;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация движения фона хедера */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url("../images/shawa_background.png") repeat-x;
+  background-size: auto 100%;
+  animation: moveBackground 85s linear infinite;
+  z-index: 1000;
+}
+
+/* Обновлям стили для навигации */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 150px;
+  font-size: 34px;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav a {
+  padding: 10px 15px;
+  color: #e25d04f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #d35400;
+  transform: translateY(-2px);
+}
+
+/* Обновляем стили для декоративных элементов около секций */
+.about-section,
+.testimonials,
+.promotions,
+.delivery {
+    position: relative;
+    margin: 80px auto;
+    padding: 40px 20px;
+}
+
+.decorative-elements {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+/* Обновляем стили футера */
+.main-footer {
+    position: relative;
+    background: linear-gradient(to right, #f598a8, #f6edb2);
+    padding: 50px 0 20px;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info,
+.footer-social,
+.footer-hours {
+    text-align: center;
+}
+
+.footer-info h3,
+.footer-social h3,
+.footer-hours h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info p,
+.footer-hours p {
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-info p:hover,
+.footer-hours p:hover {
+    transform: translateY(-2px);
+}
+
+/* Обновляем стили для основного контента */
+main {
+  margin-top: 150px; /* Добавляем отступ равный высоте header */
+  padding: 50px;
+  background-color: rgb(231, 224, 198);
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+/* Обновляем стили для заголовка */
+h1 {
+  margin: 0 0 50px; /* Убираем верхний отступ */
+  text-align: center;
+  font-size: 55px;
+  color: #e25d04f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Обновляем стили для контейнера меню */
+.menu-container {
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Обновляем стили для наведения на текст в конерах */
+.about-item,
+.testimonial-item,
+.promotion-item,
+.delivery-item {
+    position: relative;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Добавляем эффект при наведении */
+.about-item::before,
+.testimonial-item::before,
+.promotion-item::before,
+.delivery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(245, 152, 168, 0.1), rgba(246, 237, 178, 0.1));
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.about-item:hover::before,
+.testimonial-item:hover::before,
+.promotion-item:hover::before,
+.delivery-item:hover::before {
+    transform: scaleX(1);
+}
+
+.about-item:hover,
+.testimonial-item:hover,
+.promotion-item:hover,
+.delivery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Обновляем стили футера */
+.main-footer {
+    position: relative;
+    background: linear-gradient(to right, #f598a8, #f6edb2);
+    padding: 50px 0 20px;
+    margin-top: 100px;
+    overflow: hidden;
+    border: none; /* Убираем все границы */
+}
+
+.footer-content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    border: none; /* Убираем все границы */
+}
+
+.footer-content::after {
+    display: none; /* Убираем декоративный разделитель */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    color: #333;
+    font-size: 0.9em;
+    position: relative;
+    margin-top: 30px;
+    border: none; /* Убираем все границы */
+}
+
+/* Добавляем плавный переход между main и footer */
+main::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Небольшой нахлест для избежания белой линии */
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgb(231, 224, 198), #f598a8);
+    pointer-events: none;
+}
+
+/* Обновляем стили для текста в футере */
+.footer-info h3,
+.footer-social h3,
+.footer-hours h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info p,
+.footer-hours p {
+    color: #444;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.footer-info p:hover,
+.footer-hours p:hover {
+    transform: translateY(-2px);
+    color: #333;
+}
+
+.social-link {
+    color: #333;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #e25d04;
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(226, 93, 4, 0.3);
+}
+
+/* Декоративные элементы */
+.decorative-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.decorative-icon {
+    position: absolute;
+    font-size: 45px;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.icon-1 { top: 200px; left: 60px; animation-delay: 0s; color: #d5728e; }
+.icon-2 { top: 200px; right: 60px; animation-delay: 0.5s; color: #e25d04; }
+.icon-3 { bottom: 200px; left: 60px; animation-delay: 1s; color: #f598a8; }
+.icon-4 { bottom: 200px; right: 60px; animation-delay: 1.5s; color: #d7d38d; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); opacity: 1; }
+    50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+}
+
+/* Обновленные стили футера */
+.main-footer {
+    position: relative;
+    background: linear-gradient(to right, #f598a8, #f6edb2);
+    padding: 50px 0 20px;
+    margin-top: 100px;
+    overflow: hidden;
+    border-top: 3px solid #e25d04; /* Возвращаем оранжевую линию */
+}
+
+.footer-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    display: none; /* Убираем волны для более чистого перехода */
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+#wave1 { opacity: 0.7; animation: wave 18s linear infinite; }
+#wave2 { opacity: 0.5; animation: wave 12s linear infinite; top: 10px; }
+#wave3 { opacity: 0.3; animation: wave 10s linear infinite; top: 15px; }
+#wave4 { opacity: 0.2; animation: wave 8s linear infinite; top: 20px; }
+
+@keyframes wave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1) }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
+}
+
+/* Добавляем новые стили для декоративных элементов */
+.icon-5 { top: 50px; left: 30px; animation-delay: 0.2s; color: #f598a8; }
+.icon-6 { top: 50px; right: 30px; animation-delay: 0.7s; color: #d7d38d; }
+.icon-7 { bottom: 50px; left: 30px; animation-delay: 1.2s; color: #e25d04; }
+.icon-8 { bottom: 50px; right: 30px; animation-delay: 1.7s; color: #d5728e; }
+
+.icon-9 { top: 30px; left: 40px; animation-delay: 0.3s; color: #f598a8; }
+.icon-10 { top: 30px; right: 40px; animation-delay: 0.8s; color: #d7d38d; }
+.icon-11 { bottom: 30px; left: 40px; animation-delay: 1.3s; color: #e25d04; }
+.icon-12 { bottom: 30px; right: 40px; animation-delay: 1.8s; color: #d5728e; }
+
+.icon-13 { top: 40px; left: 50px; animation-delay: 0.4s; color: #f598a8; }
+.icon-14 { top: 40px; right: 50px; animation-delay: 0.9s; color: #d7d38d; }
+.icon-15 { bottom: 40px; left: 50px; animation-delay: 1.4s; color: #e25d04; }
+.icon-16 { bottom: 40px; right: 50px; animation-delay: 1.9s; color: #d5728e; }
+
+.icon-17 { top: 35px; left: 45px; animation-delay: 0.5s; color: #f598a8; }
+.icon-18 { top: 35px; right: 45px; animation-delay: 1.0s; color: #d7d38d; }
+.icon-19 { bottom: 35px; left: 45px; animation-delay: 1.5s; color: #e25d04; }
+.icon-20 { bottom: 35px; right: 45px; animation-delay: 2.0s; color: #d5728e; }
+
+/* Оновляем стили контейнеров для лучшего расположения */
+.about-us,
+.testimonial-container,
+.promotion-container,
+.delivery-container {
+    position: relative;
+    margin: 60px auto;
+    padding: 40px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+/* Добавляем градиентную рамку для контейнеров */
+.about-us::before,
+.testimonial-container::before,
+.promotion-container::before,
+.delivery-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 32px;
+    background: linear-gradient(45deg, #f598a8, #f6edb2, #d5728e, #d7d38d);
+    z-index: -1;
+    animation: borderAnimation 4s linear infinite;
+}
+
+/* Добавляем плавные переходы между секциями */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 0; /* Убираем отступ снизу */
+}
+
+/* Обновляем стили для лучшей читаемости */
+.about-us p,
+.testimonial-item,
+.promotion-item,
+.delivery-item {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: transparent;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Добавляем эффект при наведении */
+.about-us p:hover,
+.testimonial-item:hover,
+.promotion-item:hover,
+.delivery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Обновляем стили для декоративных элементов */
+.decorative-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    top: -30px; /* Поднимаем элементы выше */
+}
+
+/* Обновляем стили для контейнеров */
+.menu-container,
+.about-us,
+.testimonial-container,
+.promotion-container {
+    position: relative;
+    margin: 80px auto; /* Увеличиваем отступы между секциями */
+    padding: 40px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: none;
+    overflow: visible; /* Позволяем декоративным элементам выходить за пределы */
+    max-width: 1200px;
+}
+
+/* Обновляем стили для секции доставки */
+.delivery {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    margin: 80px auto;
+    background: transparent;
+    max-width: 1200px;
+    border-radius: 30px;
+}
+
+.delivery-item {
+    background: transparent;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: none; /* Убираем рамку */
+}
+
+.delivery-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Обновляем позиции декоративных элементов */
+.icon-1, .icon-2, .icon-3, .icon-4 { position: absolute; }
+.icon-1 { top: -20px; left: 5%; }
+.icon-2 { top: -20px; right: 5%; }
+.icon-3 { bottom: -20px; left: 5%; }
+.icon-4 { bottom: -20px; right: 5%; }
+
+/* Обновляем размеры и отступы для main */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Увеличиваем расстояние ежду секциями */
+    padding: 50px 20px 100px;
+    margin-top: 150px; /* Отступ от фиксированного header */
+}
+
+/* Обновляем стили для лучшей читаемости */
+.about-us p,
+.testimonial-item,
+.promotion-item,
+.delivery-item {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: transparent;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Обновляем стили футера */
+.main-footer {
+    position: relative;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+
+/* Обновляем рзмеры контейнеров */
+.about-us,
+.testimonial-container,
+.promotion-container {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Обновляем стили для текста копирайта */
+.copyright {
+    color: #333;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Обновляем стили для секции "О нас" */
+.about-us .no-rectangle {
+    color: #333;
+    font-weight: normal;
+    text-shadow: none;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: transparent;
+}
+
+/* Добавляем медиа-запрос дл адаптивности */
+@media (max-width: 992px) {
+    .menu-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .shava_products {
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .shava_products {
+        max-width: 100%;
+    }
+}
+
+/* Обновляем стили для загловка в "О нас" */
+.about-title {
+    color: #000000f6;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Обновляем стили для текста в "О нас" */
+.about-us p.no-rectangle {
+    color: #333;
+}
+
+/* Обновляем стили для выделенного текста */
+.about-item .highlight {
+    color: #e25d04f6;
+    font-weight: bold;
+}
+
+/* Обновляем стили для обычного текста в пунктах */
+.about-item {
+    color: #333;
+}
+
+/* Обновляем стили для секции тзывов */
+.testimonials {
+    position: relative;
+    margin: 80px auto;
+    padding: 40px 20px;
+}
+
+/* Добавляем декоративные элементы вокруг секции */
+.testimonials .decorative-elements {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+/* Позиционируем иконки для отзывов */
+.testimonials .icon-1 { top: -20px; left: 5%; }
+.testimonials .icon-2 { top: -20px; right: 5%; }
+.testimonials .icon-3 { bottom: -20px; left: 5%; }
+.testimonials .icon-4 { bottom: -20px; right: 5%; }
+
+/* Обновляем стили для контейнера отзывов */
+.testimonial-container {
+    background: transparent;
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Обновляем HTML струкруру для отзывов */
+
+/* Обновляем стили для секции "О нас" */
+.about-section {
+    position: relative;
+    margin: 80px auto;
+    padding: 40px 20px;
+}
+
+/* Перемещаем декоративные элементы за пределы контейнера */
+.about-section .decorative-elements {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 60px);
+    pointer-events: none;
+}
+
+/* Обновляем стили заголовка */
+.section-title {
+    color: #000000f6;
+    font-size: 55px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Обновляем стили контейнера */
+.about-us {
+    background-image: url("../images/shawa_2_sectionjpg.jpg");
+    background-position: center;
+    background-size: cover;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 50px;
+    margin-top: -20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.about-us ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-us li {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Эффекты для секции "О нас" ========== */
+.about-us li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.about-us li:hover {
+  transform: scale(1.05);
+}
+
+.about-us li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========== Секция "Отзывы" ========== */
+.testimonial-container {
+  background-image: url("../images/testiominal_3_section.png");
+  background-position: center;
+  background-size: cover;
+  max-width: 780px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 59px;
+  margin: 20px auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
+    background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 25px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+
+
+/* ========== Стили для отзывов ========== */
+.testimonial-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-container li {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  will-change: transform;
+}
+
+.testimonial-container li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.testimonial-container li:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-container li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========== Секция "Акции" ========== */
+.promotion-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-image: url(../images/promotion.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
+    background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+
+
+/* ========== Стили для акций ========== */
+.promotion-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #000000f6;
+}
+
+.promotion-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.promotion-item {
+  margin: 10px 0;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  position: relative;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000;
+  font-size: 1em;
+  text-align: center;
+  background-color: transparent;
+}
+
+.promotions.scale-up {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.promotion-item:hover {
+  transform: scale(1.02);
+}
+
+/* ========== Эффекты для акций ========== */
+.promotion-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.promotion-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+
+/* ========== Стили для элементов акций ========== */
+.promotion-item span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.promotion-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Секция доставки ========== */
+.delivery {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  margin: 80px auto;
+  background: transparent;
+  max-width: 1200px;
+  border-radius: 30px;
+}
+
+.delivery-item {
+  background: transparent;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 800px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.delivery-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ========== Футер ========== */
+.main-footer {
+  background: linear-gradient(to right, #f598a8, #f6edb2);
+  padding: 50px 0 20px;
+  margin-top: 0;
+  border: none; /* Убираем линию */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border: none; /* Убираем все возможные границы */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+  font-size: 0.9em;
+  margin-top: 30px;
+  border: none; /* Убираем границу */
+}
+
+/* Обновляем стили для заголовка "О нас" */
+.about-title {
+    color: #000000f6; /* Такой же цвет как у "Отзывы" */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Обновляем стили футера для плавного перехода */
+.main-footer {
+    position: relative;
+    background: linear-gradient(to right, #f598a8, #f6edb2);
+    padding: 50px 0 20px;
+    margin-top: -30px; /* Немного поднимаем футер для перекрытия */
+}
+
+.footer-gradient-overlay {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, rgba(245, 152, 168, 0.5));
+    pointer-events: none;
+}

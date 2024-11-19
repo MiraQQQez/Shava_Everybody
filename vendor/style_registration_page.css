@@ -1,0 +1,199 @@
+/* Стили для всего body (всей страницы) */
+body {
+  margin: 0;
+  font-family: "V_CCZoinks", sans-serif;
+  font-size: 20px;
+  background-color: rgb(235, 215, 191);
+  color: black;
+  line-height: 1.5;
+}
+
+/* Стили для ссылок */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Стили для header (шапки сайта) */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  background: url("../images/shawa_background_3.jpg") repeat-x;
+  background-size: auto 100%;
+  animation: moveBackground 85s linear infinite;
+  transition: background-position 1s ease-in-out;
+}
+
+/* Анимация движения фона хедера */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+/* Контейнер для содержимого header */
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Логотип и название сайта */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.logo-text {
+  padding-top: 20px;
+}
+
+.logo-text a h1 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+header>a img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+/* Стили для навигации (меню сайта) */
+nav {
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+  justify-content: flex-end;
+  /* Выравнивание по правому краю */
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* Стили для пунктов меню (общие для всех ссылок) */
+nav a,
+.shava_products p {
+  position: relative;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  z-index: 1;
+  background-color: transparent;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  /* Для корректной работы эффекта */
+}
+
+/* Псевдоэлемент для создания оранжевого прямоугольника */
+nav a::before,
+.shava_products p::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(to right, #ff6347, #f79f81);
+  z-index: -1;
+  transform: translate(-50%, -50%) scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация при наведении (общая для всех ссылок) */
+nav a:hover::before,
+.shava_products p:hover::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+/* Цвет текста при наведении (общий для всех ссылок) */
+nav a:hover,
+.shava_products p:hover {
+  color: black;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+
+
+h1 {
+  margin: 0 0 50px;
+  text-align: center;
+  font-size: 4em;
+}
+
+/* Модальное окно для регистрации */
+.registration-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 1000;
+  visibility: hidden;
+}
+
+/* Появление модального окна */
+.registration-modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+/* Анимация кнопок */
+button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e55342;
+  transform: scale(1.1);
+}
+
+/* Логотип */
+.logo-wrapper img {
+  max-height: 80px;
+  width: auto;
+}
