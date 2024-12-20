@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | ShavaScript</title>
+    
+    <!-- Базовые стили -->
+    <link rel="stylesheet" href="../../../../vendor/css/core/normalize.css">
+    <link rel="stylesheet" href="../../../../vendor/css/core/style.css">
+    
+    <!-- Стили компонентов -->
+    <link rel="stylesheet" href="../../../../vendor/css/layouts/header.css">
+    <link rel="stylesheet" href="../../../../vendor/css/layouts/footer.css">
+    <link rel="stylesheet" href="../../../../vendor/css/layouts/navigation.css">
+    <link rel="stylesheet" href="../../../../vendor/css/layouts/progress-bar.css">
+    <link rel="stylesheet" href="../../../../vendor/css/layouts/sections.css">
+    
+    <!-- Стили страницы -->
+    <link rel="stylesheet" href="../../../../vendor/css/pages/account/my_account.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body data-page="account">
+    <!-- Прогресс-бар -->
+    <div class="progress-bar">
+        <div class="progress-bar__fill"></div>
+    </div>
+
+    <!-- Шапка -->
+    <header>
+        <div class="content">
+            <div class="logo-wrapper">
+                <img src="../../../../assets/images/logo/logo.png" alt="Logo" width="120" height="120">
+                <div class="logo-text">
+                    <a href="../../../../index.html">
+                        <h1>ShavaScript</h1>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="nav-item"><a href="../../../../index.html">Главная</a></li>
+                    <li class="nav-item"><a href="my_account.html" class="active">Личный кабинет</a></li>
+                    <li class="nav-item"><a href="../contacts/contacts.html">Контакты</a></li>
+                    <li class="nav-item"><a href="../about/about_us.html">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main style="margin-top: 180px;">
+        <div class="decorative-elements">
+            <div class="circle"></div>
+            <div class="square"></div>
+            <div class="triangle"></div>
+        </div>
+
+        <div class="account-container">
+            <div class="account-header">
+                <div class="user-info-card">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle fa-4x"></i>
+                    </div>
+                    <div class="user-details">
+                        <h2>Иван Иванов</h2>
+                        <div class="user-badges">
+                            <span class="badge premium">
+                                <i class="fas fa-crown"></i> Premium
+                            </span>
+                            <span class="badge orders">
+                                <i class="fas fa-star"></i> Постоянный клиент
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-gift"></i>
+                            <span class="stat-value">500</span>
+                            <span class="stat-label">Бонусов</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Заказов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account-sections">
+                <div class="section-card orders-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-clock-rotate-left"></i> Последние заказы</h3>
+                        <a href="#" class="view-all">Все заказы <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-status-badge delivered">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="order-content">
+                                <div class="order-header">
+                                    <h4>Заказ #1234</h4>
+                                    <span class="order-date">01.04.2024</span>
+                                </div>
+                                <div class="order-details">
+                                    <p>Шаурма "Традиционная" × 2</p>
+                                    <p>Шаурма "Острая" × 1</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">750 ₽</span>
+                                    <button class="repeat-order">
+                                        <i class="fas fa-redo"></i> Повторить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-item new-item">
+                            <div class="order-status-badge processing">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="order-content">
+                                <div class="order-header">
+                                    <h4>Заказ #1235</h4>
+                                    <span class="order-date">03.04.2024</span>
+                                </div>
+                                <div class="order-details">
+                                    <p>Шаурма "Фирменная" × 1</p>
+                                    <p>Шаурма "XXL" × 1</p>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">950 ₽</span>
+                                    <button class="track-order">
+                                        <i class="fas fa-map-marker-alt"></i> Отследить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card address-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-map-marker-alt"></i> Адреса доставки</h3>
+                    </div>
+                    <div class="address-list">
+                        <div class="address-item active">
+                            <div class="address-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="address-content">
+                                <h4>Домашний адрес</h4>
+                                <p>ул. Примерная, д. 1, кв. 123</p>
+                                <div class="address-actions">
+                                    <button class="edit-btn">
+                                        <i class="fas fa-pencil"></i> Изменить
+                                    </button>
+                                    <button class="delete-btn">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <div class="address-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="address-content">
+                                <h4>Рабочий адрес</h4>
+                                <p>ул. Деловая, д. 10, офис 505</p>
+                                <div class="address-actions">
+                                    <button class="edit-btn">
+                                        <i class="fas fa-pencil"></i> Измени��ь
+                                    </button>
+                                    <button class="delete-btn">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card preferences-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-heart"></i> Любимые блюда</h3>
+                    </div>
+                    <div class="favorites-list">
+                        <div class="favorite-item">
+                            <img src="../../../../assets/images/products/chicken/shava_chicken_1.jpg" alt="Шаурма">
+                            <div class="favorite-content">
+                                <h4>Шаурма "Традиционная"</h4>
+                                <span class="price">250 ₽</span>
+                                <button class="order-btn">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card settings-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-cog"></i> Настройки</h3>
+                    </div>
+                    <div class="settings-list">
+                        <div class="setting-item">
+                            <div class="setting-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <div class="setting-content">
+                                <h4>Уведомления</h4>
+                                <p>Управлеие push-уведомлениями</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="setting-item">
+                            <div class="setting-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="setting-content">
+                                <h4>Безопасность</h4>
+                                <p>Изменить пароль</p>
+                            </div>
+                            <button class="edit-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="footer-gradient-overlay"></div>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@shavascript.ru</p>
+                <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 1</p>
+            </div>
+            <div class="footer-social">
+                <h3>Мы в соцсетях</h3>
+                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-hours">
+                <h3>Время работы</h3>
+                <p><i class="far fa-clock"></i> Пн-Пт: 10:00 - 22:00</p>
+                <p><i class="far fa-clock"></i> Сб-Вс: 11:00 - 23:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShavaScript. Все права защиены.</p>
+        </div>
+    </footer>
+
+    <!-- Основные скрипты -->
+    <script src="../../../../js/core/cookie_local_storage.js"></script>
+    <script src="../../../../js/core/main.js"></script>
+    <script src="../../../../js/account/account.js"></script>
+</body>
+
+</html>

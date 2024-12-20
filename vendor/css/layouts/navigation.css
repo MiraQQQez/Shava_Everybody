@@ -1,0 +1,146 @@
+/*
+ * Copyright (c) 2024 Igor Silin
+ * All rights reserved.
+ * Licensed under the MIT License.
+ * Email: igor.silin.03@inbox.ru
+ * GitHub: https://github.com/MiraQQQez
+*/
+
+/* Базовые стили для навигации */
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #e25d04f6;
+}
+
+/* Стили для мобильного меню */
+.burger-menu {
+    display: none;
+}
+
+/* Медиа-запросы */
+@media screen and (max-width: 1024px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 241, 230, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1001;
+    }
+
+    nav.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-item a {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav.active {
+        padding-top: 80px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .nav-item a {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav.active {
+        padding-top: 75px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .nav-item a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav.active {
+        padding-top: 45px; /* Соответствует высоте хедера */
+    }
+
+    nav ul {
+        gap: 10px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-item a {
+        font-size: 16px;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .burger-menu {
+        width: 20px;
+        height: 16px;
+        right: 10px;
+    }
+
+    .burger-menu span {
+        height: 2px;
+        margin: 3px 0;
+    }
+}

@@ -1,0 +1,626 @@
+body {
+  margin: 0;
+  height: 160vh;
+  font-family: "V_CCZoinks", sans-serif;
+  font-size: 18px;
+  background: linear-gradient(to right, #ffe6cc, #ffcc99);
+  color: black;
+  line-height: 1.6;
+
+}
+
+/* Прогресс-бар */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  /* Прозрачный фон */
+  z-index: 9999;
+  /* Убедитесь, что прогресс-бар выше всех элементов */
+}
+
+.progress-bar__fill {
+  height: 100%;
+  width: 0%;
+  background-image: linear-gradient(90deg, #f598a8, #f6edb2);
+  transition: width 0.25s;
+}
+
+/* Стили для скролла */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Стили для ссылок */
+a {
+  color: #e25d04f6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d35400;
+}
+
+/* Стили для header (шапки сайта) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  background: url("../../../../assets/images/backgrounds/shawa_background.png") repeat-x;
+  background-size: auto 100%;
+  animation: moveBackground 85s linear infinite;
+  transition: background-position 1s ease-in-out;
+  z-index: 1000;
+  /* Высокое значение z-index для отображения поверх всех элементов */
+}
+
+/* Анимация движения фона хедера */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1000px 0;
+  }
+}
+
+/* Контейнер для содержимого header */
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+
+}
+
+/* Логотип и название сайта */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.logo-text {
+  padding-top: 0px;
+}
+
+.logo-text a h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Стили для навигации (меню сайта) */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 150px;
+  z-index: 1000;
+  padding: 0 40px;
+  background: transparent;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav a {
+  font-size: 28px;
+  padding: 12px 24px;
+  color: #333 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background: none !important;
+  -webkit-text-fill-color: #333 !important;
+}
+
+/* Стили основного контента (главного блока с меню шаурмы) */
+main {
+  padding: 50px;
+  background-color: rgb(231, 224, 198);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+h1 {
+  margin: 100px;
+  text-align: center;
+  font-size: 55px;
+  color: #e25d04f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+h2 {
+  margin: 55px;
+  text-align: center;
+  font-size: 0px;
+  color: #e25d04f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Контейнер для категорий шаурмы */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.menu-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(45deg, #f598a8, #f6edb2, #d5728e, #d7d38d);
+  z-index: -1;
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Декоративная рамка */
+.menu-container::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 32px;
+  background: linear-gradient(45deg, #f598a8, #f6edb2, #d5728e, #d7d38d);
+  z-index: -1;
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Декоративные элементы */
+.decorative-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.decorative-icon {
+  position: absolute;
+  font-size: 45px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.icon-1 {
+  top: 200px;
+  left: 60px;
+  animation-delay: 0s;
+  color: #d5728e;
+}
+
+.icon-2 {
+  top: 200px;
+  right: 60px;
+  animation-delay: 0.5s;
+  color: #e25d04;
+}
+
+.icon-3 {
+  bottom: 200px;
+  left: 60px;
+  animation-delay: 1s;
+  color: #f598a8;
+}
+
+.icon-4 {
+  bottom: 200px;
+  right: 60px;
+  animation-delay: 1.5s;
+  color: #d7d38d;
+}
+
+/* Анимации */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+/* Обновляем стили карточки товара для лучшего контраста с градиентом */
+.shava_products {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.98);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.product-content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Добавляем декоративные бейджи */
+.product-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(90deg, #d5728e, #d7d38d);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(5deg);
+}
+
+.shava_products:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.shava_products img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+h2.highlight {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #e25d04f6;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e25d04f6;
+}
+
+.button {
+  width: 80%;
+  background: linear-gradient(90deg, #d5728e, #d7d38d);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.mini-footer {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-link {
+  color: #333;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #333;
+  transform: translateY(-5px);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .shava_products {
+    margin: 15px;
+  }
+
+  .product-content {
+    padding: 20px;
+  }
+
+  h2.highlight {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .button {
+    width: 90%;
+  }
+}
+
+/* Выделенные слова */
+.highlight {
+  color: #e25d04f6;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 25px;
+  gap: 15px;
+  text-align: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #e25d04f6;
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  background: linear-gradient(90deg, #d5728e, #d7d38d);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  outline: none;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(37, 117, 252, 0.5);
+}
+
+.main-footer {
+  position: relative;
+  background: linear-gradient(to right, #f598a8, #f6edb2);
+  padding: 50px 0 20px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-info,
+.footer-social,
+.footer-hours {
+  text-align: center;
+}
+
+.footer-info h3,
+.footer-social h3,
+.footer-hours h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info p,
+.footer-hours p {
+  color: #444;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.footer-info p:hover,
+.footer-hours p:hover {
+  transform: translateY(-2px);
+  color: #333;
+}
+
+.social-link {
+  color: #333;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #e25d04;
+  transform: translateY(-5px);
+  text-shadow: 0 5px 15px rgba(226, 93, 4, 0.3);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+  font-size: 0.9em;
+  margin-top: 30px;
+  border: none;
+}
+
+.footer-gradient-overlay {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(245, 152, 168, 0.5));
+  pointer-events: none;
+}
+
+/* Обновляем стили иконок */
+.footer-info i, 
+.footer-hours i {
+    color: #333;
+    font-size: 18px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-link {
+    color: #333;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #e25d04f6;
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(226, 93, 4, 0.3);
+}

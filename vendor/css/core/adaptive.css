@@ -1,0 +1,150 @@
+/*
+ * Copyright (c) 2024 Igor Silin
+ * All rights reserved.
+ * Licensed under the MIT License.
+ * Email: igor.silin.03@inbox.ru
+ * GitHub: https://github.com/MiraQQQez
+ * 
+ * Digital Signature: IS-2024-SHA256-b8e3c5d2
+ * Last modified: 2024-03-20
+ * Version: 1.0.0
+ * 
+ * WARNING: This code is protected by copyright and is the intellectual property
+ * of Igor Silin. Any unauthorized use, reproduction, or distribution is strictly
+ * prohibited and may result in legal action.
+ * 
+ * NOTICE: This code is protected by copyright law and international treaties.
+ * Unauthorized reproduction or distribution of this code, or any portion of it,
+ * may result in severe civil and criminal penalties, and will be prosecuted
+ * to the maximum extent possible under law.
+*/
+
+/* Desktop First */
+
+/* Large Desktop (1440px) */
+@media screen and (max-width: 1440px) {
+  header .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  
+  .logo-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-wrapper img {
+    height: 180px;
+    width: 180px;
+  }
+
+  .logo-text {
+    white-space: nowrap;
+    font-size: 0.8em;
+  }
+  
+  .logo-text h1 {
+    font-size: 20px;
+  }
+  
+  .menu-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Desktop (1024px) */
+@media screen and (max-width: 1024px) {
+    body[data-page="home"] .menu-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1360px;
+        margin-left: -55px;
+        margin-right: -55px;
+        padding: 0 40px;
+        position: relative;
+        justify-content: start;
+    }
+
+    body[data-page="home"] .shava_products {
+        width: 100%;
+        margin: 0;
+        min-width: 300px;
+    }
+
+    body[data-page="home"] .shava_products img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+  .menu-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 320px) !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 60px auto !important;
+    padding: 60px !important;
+    box-sizing: border-box !important;
+  }
+
+  .shava_products {
+    width: 320px !important;
+    padding: 20px !important;
+    border-radius: 15px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .shava_products:nth-child(3) {
+    grid-column: 1 / 3 !important;
+    width: 320px !important;
+    justify-self: center !important;
+  }
+
+  .shava_products img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    display: block !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .shava_products:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .shava_products:hover img {
+    transform: scale(1.02) !important;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 425px) {
+  .menu-container {
+    grid-template-columns: 1fr !important;
+    padding: 30px !important;
+  }
+
+  .shava_products:nth-child(3) {
+    grid-column: auto !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu-container {
+    padding: 20px !important;
+  }
+}

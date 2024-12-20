@@ -1,0 +1,258 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-02T15:14:56.731Z",
+    "end": "2024-12-02T15:15:00.528Z",
+    "duration": 3797,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "72e28ef1-a8ef-42af-80c4-c2ea840af5a7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home_page-copy-1.cy.js",
+      "file": "cypress\\e2e\\home_page-copy-1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06adb1f6-e2f6-4c4e-9194-5544c5301691",
+          "title": "Тестирование сайта",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "ecd2bdae-c581-45d2-ac69-db752c8a1262",
+              "title": "Главная страница",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Проверка навигации",
+                  "fullTitle": "Тестирование сайта Главная страница Проверка навигации",
+                  "timedOut": null,
+                  "duration": 1190,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('nav').should('be.visible');\ncy.get('nav li').should('have.length', 4);",
+                  "err": {},
+                  "uuid": "417a7025-a171-4b53-92b5-534b90b01354",
+                  "parentUUID": "ecd2bdae-c581-45d2-ac69-db752c8a1262",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Проверка секции меню",
+                  "fullTitle": "Тестирование сайта Главная страница Проверка секции меню",
+                  "timedOut": null,
+                  "duration": 120,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.menu-container').should('be.visible');\ncy.get('.shava_products').should('have.length', 3);",
+                  "err": {},
+                  "uuid": "67429e2a-aea5-4555-9b65-e448f3d1046a",
+                  "parentUUID": "ecd2bdae-c581-45d2-ac69-db752c8a1262",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Проверка футера",
+                  "fullTitle": "Тестирование сайта Главная страница Проверка футера",
+                  "timedOut": null,
+                  "duration": 110,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.main-footer').should('be.visible');\ncy.get('.footer-social').should('exist');",
+                  "err": {},
+                  "uuid": "5c93053b-c9c3-4f36-aecf-b826976596c3",
+                  "parentUUID": "ecd2bdae-c581-45d2-ac69-db752c8a1262",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Проверка приветственного блока",
+                  "fullTitle": "Тестирование сайта Главная страница Проверка приветственного блока",
+                  "timedOut": null,
+                  "duration": 1669,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.welcome-container').should('be.visible');\ncy.get('.welcome-container h1').should('contain', 'Добро пожаловать');",
+                  "err": {},
+                  "uuid": "fbc4976e-46a6-454d-89c3-ba93ac501e22",
+                  "parentUUID": "ecd2bdae-c581-45d2-ac69-db752c8a1262",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "417a7025-a171-4b53-92b5-534b90b01354",
+                "67429e2a-aea5-4555-9b65-e448f3d1046a",
+                "5c93053b-c9c3-4f36-aecf-b826976596c3",
+                "fbc4976e-46a6-454d-89c3-ba93ac501e22"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3089,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "54c8ade5-a6fc-4c5f-839f-d1e686e934c0",
+              "title": "Страницы меню",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Проверка страницы шаурмы с курицей",
+                  "fullTitle": "Тестирование сайта Страницы меню Проверка страницы шаурмы с курицей",
+                  "timedOut": null,
+                  "duration": 187,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('vendor/css/pages/products/chicken/shava_chicken.html');\ncy.get('.menu-container').should('be.visible');\ncy.get('.shava_products').should('have.length.at.least', 1);\ncy.get('.product-info').should('exist');\ncy.get('.product-price').should('exist');",
+                  "err": {},
+                  "uuid": "2bf5199a-d5a3-4cf1-b1f7-783799ae9ba3",
+                  "parentUUID": "54c8ade5-a6fc-4c5f-839f-d1e686e934c0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Проверка страницы шаурмы с говядиной",
+                  "fullTitle": "Тестирование сайта Страницы меню Проверка страницы шаурмы с говядиной",
+                  "timedOut": null,
+                  "duration": 157,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('vendor/css/pages/products/beef/shava_beef.html');\ncy.get('.menu-container').should('be.visible');\ncy.get('.shava_products').should('have.length.at.least', 1);\ncy.get('.product-info').should('exist');\ncy.get('.product-price').should('exist');",
+                  "err": {},
+                  "uuid": "f4c9d30a-40e1-4a9c-85b5-232141995669",
+                  "parentUUID": "54c8ade5-a6fc-4c5f-839f-d1e686e934c0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Проверка страницы веганской шаурмы",
+                  "fullTitle": "Тестирование сайта Страницы меню Проверка страницы веганской шаурмы",
+                  "timedOut": null,
+                  "duration": 147,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('vendor/css/pages/products/vegan/shava_vegan.html');\ncy.get('.menu-container').should('be.visible');\ncy.get('.shava_products').should('have.length.at.least', 1);\ncy.get('.product-info').should('exist');\ncy.get('.product-price').should('exist');",
+                  "err": {},
+                  "uuid": "69b9361c-50e0-42df-992f-6175c776efaa",
+                  "parentUUID": "54c8ade5-a6fc-4c5f-839f-d1e686e934c0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2bf5199a-d5a3-4cf1-b1f7-783799ae9ba3",
+                "f4c9d30a-40e1-4a9c-85b5-232141995669",
+                "69b9361c-50e0-42df-992f-6175c776efaa"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 491,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+<!--
+ * Copyright (c) 2024 Igor Silin
+ * All rights reserved.
+ * Licensed under the MIT License.
+ * Email: igor.silin.03@inbox.ru
+ * GitHub: https://github.com/MiraQQQez
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="vendor/css/core/normalize.css" />
+  <link rel="stylesheet" href="vendor/css/core/fonts.css" />
+  <link rel="stylesheet" href="vendor/css/core/style.css" />
+  <link rel="stylesheet" href="vendor/css/core/adaptive.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/header.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/navigation.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/footer.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/progress-bar.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/sections.css" />
+  <link rel="stylesheet" href="vendor/css/pages/my_account.css" />
+  <link rel="stylesheet" href="vendor/css/layouts/burger-menu-styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta name="author" content="Igor Silin">
+  <meta name="copyright" content=" 2024 Igor Silin">
+  <meta name="owner" content="Igor Silin">
+  <meta name="rights" content="All rights reserved">
+  <meta name="robots" content="noarchive">
+  <link rel="author" href="mailto:igor.silin.03@inbox.ru">
+</head>
+<body data-page="home">
+  <div class="progress-bar">
+    <div class="progress-bar__fill"></div>
+  </div>
+  <header>
+    <div class="content">
+      <div class="logo-wrapper">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/logos/shava_everybody_logojpg.png" alt="Shava Logo" loading="lazy" />
+          <div class="logo-text">
+            <h1>Shava Everybody</h1>
+          </div>
+        </a>
+      </div>
+      <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li class="nav-item"><a href="index.html">Главная</a></li>
+          <li class="nav-item"><a href="#menu">Меню</a></li>
+          <li class="nav-item"><a href="#about">О нас</a></li>
+          <li class="nav-item"><a href="#delivery">Доставка</a></li>
+          <li class="nav-item"><a href="#contacts">Контакты</a></li>
+          <li class="nav-item"><a href="account/my_account.html">Личный кабинет</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+<div class="welcome-container">
+    <h1>Добро пожаловать в Shava Everybody!</h1>
+    <p>Погрузитесь в мир восхитительных вкусов и ароматов нашей знаменитой шаурмы. Мы готовим с любовью, используя
+        только свежие ингредиенты и следуя традиционным рецептам.</p>
+    <div class="welcome-icons">
+        <i class="fas fa-star decorative-icon icon-1"></i>
+        <i class="fas fa-heart decorative-icon icon-2"></i>
+        <i class="fas fa-crown decorative-icon icon-3"></i>
+        <i class="fas fa-gem decorative-icon icon-4"></i>
+    </div>
+</div>
+        <div class="section-divider"></div>
+    </div>
+    <h2 id="menu">Меню</h2>
+    <div class="menu-container">
+        <div class="shava_products" onclick="window.location.href='vendor/css/pages/products/chicken/shava_chicken.html'">
+            <img src="assets/images/products/Shawa_chicken.jpg" alt="Шаурма с курицей" loading="lazy" />
+            <div class="product-info">
+                <span class="highlight">Шаурма с курицей</span>
+            </div>
+        </div>
+        
+        <div class="shava_products" onclick="window.location.href='vendor/css/pages/products/beef/shava_beef.html'">
+            <img src="assets/images/products/Shawa_Beef.png" alt="Шаурма с говядиной" loading="lazy" />
+            <div class="product-info">
+                <span class="highlight">Шаурма с говядиной</span>
+            </div>
+        </div>
+        
+        <div class="shava_products" onclick="window.location.href='vendor/css/pages/products/vegan/shava_vegan.html'">
+            <img src="assets/images/products/Shawa_vegan.jpg" alt="Веганская шаурма" loading="lazy" />
+            <div class="product-info">
+                <span class="highlight">Веганская шаурма</span>
+            </div>
+        </div>
+    </div>
+    <section class="about-section">
+        <div class="section-container about-us">
+            <div class="decorative-elements">
+                <i class="fas fa-utensils decorative-icon icon-1"></i>
+                <i class="fas fa-pepper-hot decorative-icon icon-2"></i>
+                <i class="fas fa-leaf decorative-icon icon-3"></i>
+                <i class="fas fa-fire decorative-icon icon-4"></i>
+            </div>
+            <h2 id="about" class="about-title">О нас</h2>
+            <p class="no-rectangle">
+                <span class="highlight">Shawa Everybody</span> - это не просто доставка шаурмы, это гастрономическое
+                путешествие в мир вкуса и удовольствия! Заказывайте прямо сейчас и
+                убедитесь сами!
+            </p>
+            <ul>
+                <li class="about-item">
+                    <span class="highlight">Свежесть:</span> Мы используем только самые
+                    свежие и качественные продукты - сочные овощи, ароматную зелень,
+                    отборное мясо. Все ингредиенты проходят строгой контроль качества,
+                    чтобы вы наслаждались вкусом, а не беспокоились о свежести.
+                    <div class="rectangle-animation"></div>
+                </li>
+                <li class="about-item">
+                    <span class="highlight">Семейный рецепт:</span> Наша шаурма
+                    готовится по уникальному рецепт, который передается из поколения в
+                    поколение. Мы бережно храним традиции и добавляем в него нотки
+                    свежести и оригинальности, чтобы каждый раз удивлять вас новыми
+                    вкусовыми сочетаниями.
+                    <div class="rectangle-animation"></div>
+                </li>
+                <li class="about-item">
+                    <span class="highlight">С любовью:</span> Мы готовим каждый заказ
+                    только после его оформления. Это значит, что вы получаете свежую,
+                    вкусную и горячую шаурму, приготовленную с душой, а не лежащую на
+                    прилавке.
+                    <div class="rectangle-animation"></div>
+                </li>
+                <li class="about-item">
+                    <span class="highlight">Доставка:</span> Мы доставим вашу шаурму к
+                    вам быстро, удобно и горячей! У нас работают только надежные
+                    курьеры, которые ценят ваше время и комфортный прием пищи.
+                    <div class="rectangle-animation"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="section-container testimonial-container">
+            <div class="decorative-elements">
+                <i class="fas fa-quote-left decorative-icon icon-5"></i>
+                <i class="fas fa-quote-right decorative-icon icon-6"></i>
+                <i class="fas fa-comment decorative-icon icon-7"></i>
+                <i class="fas fa-comments decorative-icon icon-8"></i>
+            </div>
+            <h2 class="testimonial-title">Отзывы</h2>
+            <ul>
+                <li class="testimonial-item">
+                    <span class="highlight">Александр: </span> "Шаурма от Shawa
+                    Everybody — это просто находка! Каждый раз, когда заказываю, вкус
+                    всегда на высоте. Мясо сочное, овощи свежие, а соусы просто
+                    великолепные. Доставк быстрая и всегда горячая. Рекомендую всем!"
+                </li>
+                <li class="testimonial-item">
+                    <span class="highlight">Екатерина: </span>
+                    "Я очень привередлива в ед, но шаурма от этой службы меня
+                    поразила! Идеальное со��етание текстур  вкусов. Особенно
+                    понравилась с курицей и соусом ахини — просто восхитительно!
+                    Привезли всё вовремя, а упаковка была аккуратной. Теперь только
+                    сюда!"
+                </li>
+                <li class="testimonial-item">
+                    <span class="highlight">Максим: </span>
+                    "Если вы ищете вкусную и сытную шаурму, то вам сюда! Заказываю не
+                    в первый раз и каждый раз получаю отличный сервис. Даже когда у
+                    меня были небольшие изменения в заказе, всё выполнили без проблем.
+                    Просто шикарно!"
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="promotions-section">
+        <div class="section-container promotion-container">
+            <div class="decorative-elements">
+                <i class="fas fa-gift decorative-icon icon-9"></i>
+                <i class="fas fa-percentage decorative-icon icon-10"></i>
+                <i class="fas fa-tags decorative-icon icon-11"></i>
+                <i class="fas fa-award decorative-icon icon-12"></i>
+            </div>
+            <h2 class="promotion-title">Акции и предложения</h2>
+            <ul>
+                <li class="promotion-item">
+                    <span class="highlight">Скидка 20%:</span> Закажите три шаурмы и
+                    получите скидку на весь заказ!
+                </li>
+                <li class="promotion-item">
+                    <span class="highlight">Бесплатная доставка:</span> При заказе на
+                    сумму более 1000 р.
+                </li>
+                <li class="promotion-item">
+                    <span class="highlight">Новинка:</span> Попробуйте нашу новую
+                    веганскую шаурму с уникальными соусами!
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="delivery-section">
+        <div class="section-container delivery-container">
+            <div class="decorative-elements">
+                <i class="fas fa-truck decorative-icon icon-13"></i>
+                <i class="fas fa-clock decorative-icon icon-14"></i>
+                <i class="fas fa-map-marker-alt decorative-icon icon-15"></i>
+                <i class="fas fa-credit-card decorative-icon icon-16"></i>
+            </div>
+            <h2 id="delivery" class="delivery-title">Доставка</h2>
+            <ul>
+                <li class="delivery-item">
+                    <span class="highlight">Зона доставки:</span> Утняйте у
+                    оператора.
+                </li>
+                <li class="delivery-item">
+                    <span class="highlight">Стоимость доставки:</span> Бесплатно при
+                    заказе от 1000 р., иначе - 150 р.
+                </li>
+                <li class="delivery-item">
+                    <span class="highlight">Время доставки:</span> От 30 до 60 инут.
+                </li>
+                <li class="delivery-item">
+                    <span class="highlight">Оплата:</span> Наличными или безналичными.
+                </li>
+            </ul>
+        </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="footer-gradient-overlay"></div>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-phone"></i> +7 (968) 801-28-70</p>
+            <p><i class="fas fa-envelope"></i> shava.everybody@st.ithub.ru</p>
+            <p><i class="fas fa-map-marker-alt"></i> г. Москва</p>
+        </div>
+        <div class="footer-social">
+            <h3>Мы в соцсетях</h3>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="footer-hours">
+            <h3>Время работы</h3>
+            <p><i class="far fa-clock"></i> Пн-Пт: 10:00 - 22:00</p>
+            <p><i class="far fa-clock"></i> Сб-Вс: 11:00 - 23:00</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p> 2024 Shava Everybody. Все права защищены.</p>
+    </div>
+  </footer>
+  <script src="js/core/burger-menu.js"></script>
+  <script src="js/core/main.js"></script>
+  <script src="js/core/cookie_local_storage.js"></script>
+  <script src="js/utils/redirect.js"></script>
+  <script src="js/utils/scroll.js"></script>
+</body>
+</html>
